@@ -1,0 +1,44 @@
+.todo-container {
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.5);
+}
+.App.lightMode .todo-container {
+  box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.items-left {
+  background-color: hsl(235, 24%, 19%);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: hsl(234, 11%, 52%);
+}
+
+.App.lightMode .items-left {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(236, 9%, 61%);
+}
+
+.desktop-filter {
+  display: none;
+}
+
+.clear {
+  cursor: pointer;
+}
+.clear:hover {
+  color: white;
+}
+.App.lightMode .clear:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+@media (min-width: 600px) {
+  .desktop-filter {
+    display: block;
+  }
+}

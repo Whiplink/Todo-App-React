@@ -1,0 +1,56 @@
+.todo {
+  display: flex;
+  align-items: center;
+  background-color: hsl(235, 24%, 19%);
+  padding: 15px 20px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  color: hsl(234, 39%, 85%);
+}
+.App.lightMode .todo{
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 19%, 35%);
+}
+
+.check-box {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.check-box:hover {
+  border: 1px solid white;
+}
+.App.lightMode .check-box:hover{
+  border: 1px solid black;
+}
+
+.todo-name {
+  flex: 1;
+  cursor: pointer;
+}
+
+.cross {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
+.App.lightMode .done {
+  color: hsl(236, 9%, 61%);
+}
+
+.done > .check-box {
+  background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+@media (min-width: 600px) {
+  .cross {
+    display: none;
+  }
+  .todo:hover .cross{
+    display: block;
+  }
+}

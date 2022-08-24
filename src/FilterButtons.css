@@ -1,0 +1,24 @@
+.filter-buttons {
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+  color: hsl(234, 11%, 52%);
+}
+.filter-buttons > p {
+  cursor: pointer;
+}
+.filter-buttons > p:hover {
+  color: white;
+}
+.App.lightMode .filter-buttons > p:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+.App.lightMode .filter-buttons{
+  color: hsl(236, 9%, 61%);
+}
+
+.filter-buttons > .active {
+  color: hsl(220, 98%, 61%) !important;
+  cursor: default;
+}
